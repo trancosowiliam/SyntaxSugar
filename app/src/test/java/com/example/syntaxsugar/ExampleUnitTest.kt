@@ -12,6 +12,18 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun addition_isCorrect() {
+
+        val meuValorTransformado: String = transformar(100) { x: Int ->
+            x.toString()
+        }
+
         assertEquals(4, 2 + 2)
     }
+
+
+    fun transformar(number: Int, func: (Int) -> String): String {
+        return func(number)
+    }
+
+
 }
